@@ -1,0 +1,13 @@
+<li [ngClass]="{'list-group-item my-2': true,
+'list-group-item-success': loveIts>0,
+'list-group-item-danger': loveIts<0}">
+  <h3>Title: {{title}} <span style="float: right">Created At: {{created_at | date}}</span></h3>
+  <h4>{{content}}</h4>
+
+  <div class="d-flex justify-content-end">
+
+    <a class="" (click)="addOne()"><i class="fas fa-thumbs-up" style="color: green;"></i></a>
+    <a class="mx-3" (click)="subOne()"><i class="fas fa-thumbs-down" style="color: #f00;"></i></a>
+    <h5>Likes: {{loveIts}}</h5>
+  </div>
+</li>
